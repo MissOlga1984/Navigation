@@ -8,17 +8,42 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
+    var profileHeaderView = ProfileHeaderView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadNib()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemGray6
+        view.addSubview(profileHeaderView)
+        headerLayot()
     }
-
-    func loadNib(){
-        if let xibView = Bundle.main.loadNibNamed("ProfileView", owner: nil, options: nil)?.first as? ProfileView{
-            xibView.frame = CGRect (x:0, y:50, width: UIScreen.main.bounds.width, height: 300)
-            view.addSubview(xibView)
-        }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        view.addSubview(profileHeaderView)
+        view.addSubview(profileHeaderView.lableProfile1)
+        //        profileHeaderView.frame = CGRect(x: 0, y: 70, width: 400, height: 689)
+        //        view.addSubview(profileHeaderView.statusTextField)
+        //        view.addSubview(profileHeaderView.setButtonSetStatus)
+        //        profileHeaderView.addTapGesture()
+        //        profileHeaderView.addTarget()
+        //      profileHeaderView.layout()
+        //
+        
+    }
+    
+    func headerLayot() {
+        view.addSubview(profileHeaderView)
+        
+        
+        NSLayoutConstraint.activate([
+            profileHeaderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            profileHeaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            profileHeaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            profileHeaderView.heightAnchor.constraint(equalToConstant: 220)
+        ])
     }
 }
+
+
+

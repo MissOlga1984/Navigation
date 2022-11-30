@@ -5,7 +5,7 @@
 //  Created by Mac on 30.11.2022.
 //
 
-import UIKit
+/*import UIKit
 
 class ViewController: UIViewController {
 
@@ -16,4 +16,4 @@ class ViewController: UIViewController {
 
 
 }
-
+*/
