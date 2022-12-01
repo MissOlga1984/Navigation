@@ -19,6 +19,7 @@
 		049138962937E04A00B7D845 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049138952937E04A00B7D845 /* InfoViewController.swift */; };
 		049138982937E06400B7D845 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049138972937E06400B7D845 /* PostModel.swift */; };
 		0491389A2937E08D00B7D845 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049138992937E08D00B7D845 /* ProfileHeaderView.swift */; };
+		049138A52938E94F00B7D845 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049138A42938E94F00B7D845 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		049138952937E04A00B7D845 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		049138972937E06400B7D845 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		049138992937E08D00B7D845 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		049138A42938E94F00B7D845 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				049138992937E08D00B7D845 /* ProfileHeaderView.swift */,
 				0491388B2937DAFF00B7D845 /* ProfileViewController.swift */,
+				049138A42938E94F00B7D845 /* LoginViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				049138712937DA1200B7D845 /* AppDelegate.swift in Sources */,
 				049138732937DA1200B7D845 /* SceneDelegate.swift in Sources */,
 				049138922937E00900B7D845 /* FeedViewController.swift in Sources */,
+				049138A52938E94F00B7D845 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
