@@ -7,48 +7,35 @@
 
 import UIKit
 
-final class InfoViewController: UIViewController {
-    
-    let post = FeedViewController()
+class InfoView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-    }
-    
-    func setupUI(){
+        button2()
         view.backgroundColor = .white
-        addTargets()
-        setupAlertConfiguration()
-        view.addSubview(infoButton)
     }
     
-    private let infoButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: screenSize.width / 2 - 120, y: screenSize.height / 2 - 30, width: 240, height: 60))
-        button.setTitle("Show info", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.layer.cornerRadius = screenSize.height / 15 / 3
-        button.backgroundColor = #colorLiteral(red: 0.09288740903, green: 0.5254676342, blue: 1, alpha: 1)
-        return button
-    }()
-    
-    func addTargets() {
-        infoButton.addTarget(self, action: #selector(addTarget), for: .touchUpInside)
+    func button2(){
+        var button = UIButton()
+        button = UIButton(type: .roundedRect)
+        let fr = CGRect(x: 126, y: 680, width: 150, height: 50)
+        button.frame = fr
+        button.setTitle("Нажми", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 14
+        button.addTarget(self, action: #selector(addtarget), for: .touchDown)
+        self.view.addSubview(button)
     }
     
-    let alertController = UIAlertController(title: postComplex.title, message: postComplex.message, preferredStyle: .alert)
-    
-    func setupAlertConfiguration() {
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            print("You pushed OK")
-        }))
-        alertController.addAction(UIAlertAction(title: "Get info", style: .default, handler: { _ in
-            print("Some information")
-        }))
+    @objc func addtarget(){
+        let alert = UIAlertController(title: "Внимание", message: "Вы точно этого хотите?", preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "Да", style: .default, handler: { _ in
+            print("Отлично!")})
+        alert.addAction(ok)
+        let no = UIAlertAction(title: "Нет", style: .destructive, handler: nil)
+        alert.addAction(no)
+        present(alert, animated: true, completion: nil)
     }
-    
-    @objc func addTarget() {
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
 }

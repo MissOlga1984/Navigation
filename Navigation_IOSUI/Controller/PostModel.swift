@@ -5,11 +5,10 @@
 //  Created by Mac on 30.11.2022.
 //
 
-import Foundation
+import UIKit
 
 struct Post {
     var title: String
-    var message: String
 }
 
 

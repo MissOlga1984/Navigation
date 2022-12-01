@@ -7,30 +7,37 @@
 
 import UIKit
 
-final class PostViewController: UIViewController {
-        
+class PostViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        view.backgroundColor = .white
+        lable1()
+        burbiten()
     }
     
-    func setupUI(){
-        view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        setupBarLabelItem()
-        setupBarButtonItem()
+    let post1 = FeedViewController().post.title
+    
+    func lable1(){
+        let myLable = UILabel()
+        let labelframe = CGRect(x: 180, y: 10, width: 100, height: 100)
+        myLable.frame = labelframe
+        myLable.numberOfLines = 3
+        myLable.text = post1
+        myLable.font = UIFont.boldSystemFont(ofSize: 15)
+        view.addSubview(myLable)
     }
     
-    func setupBarLabelItem() {
-        self.navigationItem.title = postComplex.title
+    func burbiten(){
+        let myButton = UIBarButtonItem(image: UIImage(systemName: "folder.circle.fill"), style: .done, target: self, action: #selector(infoView))
+        myButton.tintColor = .systemBlue
+        navigationItem.rightBarButtonItem = myButton
     }
     
-    func setupBarButtonItem() {
-        let baritem = UIBarButtonItem(image: UIImage(systemName: "bubble.right"), style: .plain, target: self, action: #selector(addTarget))
-        self.navigationItem.rightBarButtonItem = baritem
-    }
-    
-    @objc func addTarget(){
-        let infoViewController = InfoViewController()
-        navigationController?.present(infoViewController, animated: true)
+    @objc func infoView() {
+        let infoView = InfoView()
+        present(infoView, animated: true)
+        
     }
 }
+

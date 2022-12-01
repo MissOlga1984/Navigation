@@ -22,14 +22,6 @@ class ProfileViewController: UIViewController {
         super.viewWillLayoutSubviews()
         view.addSubview(profileHeaderView)
         view.addSubview(profileHeaderView.lableProfile1)
-        //        profileHeaderView.frame = CGRect(x: 0, y: 70, width: 400, height: 689)
-        //        view.addSubview(profileHeaderView.statusTextField)
-        //        view.addSubview(profileHeaderView.setButtonSetStatus)
-        //        profileHeaderView.addTapGesture()
-        //        profileHeaderView.addTarget()
-        //      profileHeaderView.layout()
-        //
-        
     }
     
     func headerLayot() {
